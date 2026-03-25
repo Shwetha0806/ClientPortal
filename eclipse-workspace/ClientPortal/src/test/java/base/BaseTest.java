@@ -2,6 +2,7 @@ package base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import pages.DocumentDashboardPage;
@@ -26,10 +27,10 @@ public class BaseTest {
         
     }
 
-//    @AfterSuite
-//    public void tearDown() {
-//    	
-//        driver.quit();
-//    
-//}
+    @AfterSuite
+    public void tearDown() {
+    	
+        driver.quit();
+    
+}
 }

@@ -27,10 +27,10 @@ public class DocumentDashboardTest extends BaseTest {
 	@Test(priority=41)
 	public void verifyFilteredDocumentCount() throws InterruptedException {
 
-	    int count = documentDashboard.getFilteredDocumentCount("testing", "All");
+	    int count = documentDashboard.getFilteredDocumentCount("ppt", "Tag");
 
 	    System.out.println("Filtered Document Count: " + count);
-	    //Assert.assertTrue(count > 0, "No documents found after filtering");
+	    Assert.assertTrue(count > 0, "No documents found after filtering");
 	}
 	
 	// ------------ profile Menu ---------------
@@ -56,7 +56,7 @@ public class DocumentDashboardTest extends BaseTest {
 
       // ================= LOGOUT =================
 
-    /* @Test(priority = 100)
+     @Test(priority = 100)
       public void verifyLogout() {
     	 documentDashboard.openProfileDropdown();
     	 documentDashboard.clickLogout();
@@ -65,6 +65,6 @@ public class DocumentDashboardTest extends BaseTest {
       Assert.assertTrue(login.isLoginWrapperDisplayed() ,
 	            "Logout failed - loginpage not loaded");
   }
-	*/
+	
 
 }

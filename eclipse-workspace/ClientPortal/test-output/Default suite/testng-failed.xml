@@ -3,34 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.FolderDashboardTest">
+      <class name="testcases.DocumentDashboardTest">
         <methods>
           <include name="setup"/>
-          <include name="verifyCreateFolderPopup"/>
-          <include name="verifyDropdownOpens"/>
-          <include name="printFoldersForAllDropdownOptions"/>
-          <include name="verifyHeaderSection"/>
-          <include name="verifyFolderTab"/>
-          <include name="verifyFolderContainer"/>
-          <include name="verifyFooterSection"/>
-          <include name="verifyDashboardLogo"/>
-          <include name="verifyProfileIcon"/>
+          <include name="verifyNavigationToDocumentDashboard"/>
           <include name="tearDown"/>
-          <include name="verifyFolderIcons"/>
           <include name="verifyLogout"/>
-          <include name="verifyPinnedAndUnpinnedFolderCount"/>
-          <include name="verifyVersionText"/>
-          <include name="verifyPageTitle"/>
-          <include name="verifyDefaultSelection"/>
           <include name="verifyProfileMenuOptions"/>
-          <include name="verifyDocumentTab"/>
-          <include name="verifyFooterTest"/>
-          <include name="verifyDropdownDisplayed"/>
-          <include name="verifyClearAllFunctionality"/>
-          <include name="verifySearchFolder"/>
-          <include name="verifyCreateFolderWithName"/>
+          <include name="verifyFilteredDocumentCount"/>
         </methods>
-      </class> <!-- testcases.FolderDashboardTest -->
+      </class> <!-- testcases.DocumentDashboardTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

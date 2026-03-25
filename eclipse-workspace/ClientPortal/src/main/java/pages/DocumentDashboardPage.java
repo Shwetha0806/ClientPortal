@@ -59,9 +59,9 @@ public class DocumentDashboardPage extends BasePage {
 
 	 	    search(searchText);
 	 	    selectFilter(filterName);
-	 	    
+	 	   Thread.sleep(10000);
 	 	   waitForVisibility(DocumentDashboardLocators.DOCUMENT_LIST);
-	 	  Thread.sleep(10000);
+	 	  
 	 	    return getDocumentCount();
 	 	}
 	 	
