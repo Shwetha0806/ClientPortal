@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="31" passed="31" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-03-25T08:18:48 IST" name="ClientPortalSuite" finished-at="2026-03-25T08:19:11 IST" duration-ms="22938">
+    <groups>
+    </groups>
+    <test started-at="2026-03-25T08:18:48 IST" name="ClientPortalTests" finished-at="2026-03-25T08:19:11 IST" duration-ms="22938">
+      <class name="testcases.DocumentDashboardTest">
+        <test-method signature="verifyNavigationToDocumentDashboard()[pri:40, instance:testcases.DocumentDashboardTest@3eb738bb]" started-at="2026-03-25T08:18:59 IST" name="verifyNavigationToDocumentDashboard" finished-at="2026-03-25T08:18:59 IST" duration-ms="206" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNavigationToDocumentDashboard -->
+        <test-method signature="verifyFilteredDocumentCount()[pri:41, instance:testcases.DocumentDashboardTest@3eb738bb]" started-at="2026-03-25T08:18:59 IST" name="verifyFilteredDocumentCount" finished-at="2026-03-25T08:19:11 IST" duration-ms="12153" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFilteredDocumentCount -->
+        <test-method signature="verifyProfileMenuOptions()[pri:42, instance:testcases.DocumentDashboardTest@3eb738bb]" started-at="2026-03-25T08:19:11 IST" name="verifyProfileMenuOptions" finished-at="2026-03-25T08:19:11 IST" duration-ms="348" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProfileMenuOptions -->
+      </class> <!-- testcases.DocumentDashboardTest -->
+      <class name="testcases.FolderDashboardTest">
+        <test-method signature="verifyHeaderSection()[pri:11, instance:testcases.FolderDashboardTest@233795b6]" started-at="2026-03-25T08:18:52 IST" name="verifyHeaderSection" finished-at="2026-03-25T08:18:52 IST" duration-ms="48" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeaderSection -->
+        <test-method signature="verifyDashboardLogo()[pri:12, instance:testcases.FolderDashboardTest@233795b6]" started-at="2026-03-25T08:18:52 IST" name="verifyDashboardLogo" finished-at="2026-03-25T08:18:52 IST" duration-ms="48" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDashboardLogo -->
+        <test-method signature="verifyProfileIcon()[pri:13, instance:testcases.FolderDashboardTest@233795b6]" started-at="2026-03-25T08:18:52 IST" name="verifyProfileIcon" finished-at="2026-03-25T08:18:52 IST" duration-ms="47" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProfileIcon -->
+        <test-method signature="verifyFolderContainer()[pri:14, instance:testcases.FolderDashboardTest@233795b6]" started-at="2026-03-25T08:18:52 IST" name="verifyFolderContainer" finished-at="2026-03-25T08:18:52 IST" duration-ms="56" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFolderContainer -->
+        <test-method signature="verifyPageTitle()[pri:15, instance:testcases.FolderDashboardTest@233795b6]" started-at="2026-03-25T08:18:52 IST" name="verifyPageTitle" finished-at="2026-03-25T08:18:52 IST" duration-ms="47" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPageTitle -->
+        <test-method signature="verifyDocumentTab()[pri:16, instance:testcases.FolderDashboardTest@233795b6]" started-at="2026-03-25T08:18:52 IST" name="verifyDocumentTab" finished-at="2026-03-25T08:18:52 IST" duration-ms="134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDocumentTab -->
+        <test-method signature="verifyFolderTab()[pri:17, instance:testcases.FolderDashboardTest@233795b6]" started-at="2026-03-25T08:18:52 IST" name="verifyFolderTab" finished-at="2026-03-25T08:18:53 IST" duration-ms="167" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFolderTab -->
+        <test-method signature="verifyFolderIcons()[pri:18, instance:testcases.FolderDashboardTest@233795b6]" started-at="2026-03-25T08:18:53 IST" name="verifyFolderIcons" finished-at="2026-03-25T08:18:53 IST" duration-ms="196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFolderIcons -->
+        <test-method signature="verifyFooterSection()[pri:20, instance:testcases.FolderDashboardTest@233795b6]" started-at="2026-03-25T08:18:53 IST" name="verifyFooterSection" finished-at="2026-03-25T08:18:53 IST" duration-ms="35" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFooterSection -->
+        <test-method signature="verifyFooterTest()[pri:21, instance:testcases.FolderDashboardTest@233795b6]" started-at="2026-03-25T08:18:53 IST" name="verifyFooterTest" finished-at="2026-03-25T08:18:53 IST" duration-ms="51" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFooterTest -->
+        <test-method signature="verifyVersionText()[pri:22, instance:testcases.FolderDashboardTest@233795b6]" started-at="2026-03-25T08:18:53 IST" name="verifyVersionText" finished-at="2026-03-25T08:18:53 IST" duration-ms="44" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyVersionText -->
+        <test-method signature="verifyCreateFolderWithName()[pri:23, instance:testcases.FolderDashboardTest@233795b6]" started-at="2026-03-25T08:18:53 IST" name="verifyCreateFolderWithName" finished-at="2026-03-25T08:18:54 IST" duration-ms="1033" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCreateFolderWithName -->
+        <test-method signature="verifyCreateFolderPopup()[pri:24, instance:testcases.FolderDashboardTest@233795b6]" started-at="2026-03-25T08:18:54 IST" name="verifyCreateFolderPopup" finished-at="2026-03-25T08:18:54 IST" duration-ms="326" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCreateFolderPopup -->
+        <test-method signature="verifyPinnedAndUnpinnedFolderCount()[pri:25, instance:testcases.FolderDashboardTest@233795b6]" started-at="2026-03-25T08:18:54 IST" name="verifyPinnedAndUnpinnedFolderCount" finished-at="2026-03-25T08:18:54 IST" duration-ms="110" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPinnedAndUnpinnedFolderCount -->
+        <test-method signature="verifyDropdownDisplayed()[pri:26, instance:testcases.FolderDashboardTest@233795b6]" started-at="2026-03-25T08:18:54 IST" name="verifyDropdownDisplayed" finished-at="2026-03-25T08:18:54 IST" duration-ms="48" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDropdownDisplayed -->
+        <test-method signature="verifyDropdownOpens()[pri:27, instance:testcases.FolderDashboardTest@233795b6]" started-at="2026-03-25T08:18:54 IST" name="verifyDropdownOpens" finished-at="2026-03-25T08:18:55 IST" duration-ms="89" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDropdownOpens -->
+        <test-method signature="verifyDefaultSelection()[pri:28, instance:testcases.FolderDashboardTest@233795b6]" started-at="2026-03-25T08:18:55 IST" name="verifyDefaultSelection" finished-at="2026-03-25T08:18:55 IST" duration-ms="51" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDefaultSelection -->
+        <test-method signature="printFoldersForAllDropdownOptions()[pri:29, instance:testcases.FolderDashboardTest@233795b6]" started-at="2026-03-25T08:18:55 IST" name="printFoldersForAllDropdownOptions" finished-at="2026-03-25T08:18:58 IST" duration-ms="3494" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- printFoldersForAllDropdownOptions -->
+        <test-method signature="verifyClearAllFunctionality()[pri:30, instance:testcases.FolderDashboardTest@233795b6]" started-at="2026-03-25T08:18:58 IST" name="verifyClearAllFunctionality" finished-at="2026-03-25T08:18:58 IST" duration-ms="254" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyClearAllFunctionality -->
+        <test-method signature="verifySearchFolder()[pri:31, instance:testcases.FolderDashboardTest@233795b6]" started-at="2026-03-25T08:18:58 IST" name="verifySearchFolder" finished-at="2026-03-25T08:18:59 IST" duration-ms="150" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySearchFolder -->
+      </class> <!-- testcases.FolderDashboardTest -->
+      <class name="testcases.LoginTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.LoginTest@662ac478]" started-at="2026-03-25T08:18:45 IST" name="setup" finished-at="2026-03-25T08:18:48 IST" duration-ms="3544" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyEmailIcon()[pri:0, instance:testcases.LoginTest@662ac478]" started-at="2026-03-25T08:18:49 IST" name="verifyEmailIcon" finished-at="2026-03-25T08:18:49 IST" duration-ms="64" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEmailIcon -->
+        <test-method signature="verifyLoginBox()[pri:0, instance:testcases.LoginTest@662ac478]" started-at="2026-03-25T08:18:49 IST" name="verifyLoginBox" finished-at="2026-03-25T08:18:49 IST" duration-ms="48" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginBox -->
+        <test-method signature="verifyLoginWrapper()[pri:0, instance:testcases.LoginTest@662ac478]" started-at="2026-03-25T08:18:49 IST" name="verifyLoginWrapper" finished-at="2026-03-25T08:18:49 IST" duration-ms="47" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWrapper -->
+        <test-method signature="verifyLogo()[pri:0, instance:testcases.LoginTest@662ac478]" started-at="2026-03-25T08:18:49 IST" name="verifyLogo" finished-at="2026-03-25T08:18:49 IST" duration-ms="63" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogo -->
+        <test-method signature="verifyPasswordIcon()[pri:0, instance:testcases.LoginTest@662ac478]" started-at="2026-03-25T08:18:49 IST" name="verifyPasswordIcon" finished-at="2026-03-25T08:18:49 IST" duration-ms="57" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPasswordIcon -->
+        <test-method signature="verifySubTitle()[pri:0, instance:testcases.LoginTest@662ac478]" started-at="2026-03-25T08:18:49 IST" name="verifySubTitle" finished-at="2026-03-25T08:18:49 IST" duration-ms="36" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySubTitle -->
+        <test-method signature="verifyInvalidLogin()[pri:1, instance:testcases.LoginTest@662ac478]" started-at="2026-03-25T08:18:49 IST" name="verifyInvalidLogin" finished-at="2026-03-25T08:18:51 IST" duration-ms="1592" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInvalidLogin -->
+        <test-method signature="verifyValidLogin()[pri:2, instance:testcases.LoginTest@662ac478]" started-at="2026-03-25T08:18:51 IST" name="verifyValidLogin" finished-at="2026-03-25T08:18:52 IST" duration-ms="1434" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyValidLogin -->
+      </class> <!-- testcases.LoginTest -->
+    </test> <!-- ClientPortalTests -->
+  </suite> <!-- ClientPortalSuite -->
+</testng-results>

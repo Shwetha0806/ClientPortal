@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="testcases.FolderDashboardTest">
+        <methods>
+          <include name="setup"/>
+          <include name="verifyCreateFolderPopup"/>
+          <include name="verifyDropdownOpens"/>
+          <include name="printFoldersForAllDropdownOptions"/>
+          <include name="verifyHeaderSection"/>
+          <include name="verifyFolderTab"/>
+          <include name="verifyFolderContainer"/>
+          <include name="verifyFooterSection"/>
+          <include name="verifyDashboardLogo"/>
+          <include name="verifyProfileIcon"/>
+          <include name="tearDown"/>
+          <include name="verifyFolderIcons"/>
+          <include name="verifyLogout"/>
+          <include name="verifyPinnedAndUnpinnedFolderCount"/>
+          <include name="verifyVersionText"/>
+          <include name="verifyPageTitle"/>
+          <include name="verifyDefaultSelection"/>
+          <include name="verifyProfileMenuOptions"/>
+          <include name="verifyDocumentTab"/>
+          <include name="verifyFooterTest"/>
+          <include name="verifyDropdownDisplayed"/>
+          <include name="verifyClearAllFunctionality"/>
+          <include name="verifySearchFolder"/>
+          <include name="verifyCreateFolderWithName"/>
+        </methods>
+      </class> <!-- testcases.FolderDashboardTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
