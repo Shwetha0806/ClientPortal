@@ -23,8 +23,8 @@ public class DocumentDashboardTest extends BaseTest {
 
 	      Assert.assertTrue(dashboard.isHeaderDisplayed(),"User is not navigated to Folder page");
 	}*/
-	
-	/*@Test(priority=41)
+	/*
+	@Test(priority=41)
 	public void verifyFilteredDocumentCount() throws InterruptedException {
 
 	    int count = documentDashboard.getFilteredDocumentCount("volworks", "Tag");
@@ -36,45 +36,42 @@ public class DocumentDashboardTest extends BaseTest {
 	@Test(priority=41)
 	public void verifyAllFilterCounts() {
 
-	    documentDashboard.search("testing");
+	    documentDashboard.search("test");
 
 	    documentDashboard.countAllFilters();
 	}
-	
+
 	// ------------Create Document -------------
 	@Test(priority=42)
 	public void verifyCreateDocument() {
-		documentDashboard.clickAddButton();
+		
+			documentDashboard.clickAddButton();
 	
-    // Enter details
-    documentDashboard.enterTitle("Test Document");
-    documentDashboard.enterDescription("This is test description");
-
-    // Access type
-    documentDashboard.selectAccessType("Public");
-
-    // Add tag
-    String[] tags = {"PDF"};
-
-    for (String tag : tags) {
-    	documentDashboard.addTag(tag);
-    }
-
-    
-
-    // Upload files
-//    documentDashboard.uploadDocument("C:\Users\hp\Downloads\volworks report.docx");
-//    documentDashboard.uploadThumbnail("C:\Users\hp\Downloads\Earnings Calander Analysis.png");
-
-    documentDashboard.uploadDocument("C:/Users/hp/Downloads/volworks report.docx");
-    documentDashboard.uploadThumbnail("C:/Users/hp/Downloads/Earnings Calander Analysis.png");
-    // Dates
-    documentDashboard.selectStartDate("03/25/2026");
-    documentDashboard.selectEndDate("03/30/2026");
-
-    // Publish
-    documentDashboard.clickPublish();
-	}
+		    // Enter details
+		    documentDashboard.enterTitle("Test Document");
+		    documentDashboard.enterDescription("This is test description");
+		
+		    // Access type
+		    documentDashboard.selectAccessType("Public");
+		
+		    // Add tag
+		    String[] tags = {"PG","PDF"};
+		
+		    for (String tag : tags) {
+		    	documentDashboard.addTag(tag);
+		    }  
+		/*
+		    // Upload files
+		
+		    documentDashboard.uploadDocument("C:/Users/hp/Downloads/volworks report.docx");
+		    documentDashboard.uploadThumbnail("C:/Users/hp/Downloads/Earnings Calander Analysis.png");
+		    
+		    // Dates
+		    documentDashboard.selectStartDate("03/25/2026");
+		    documentDashboard.selectEndDate("03/30/2026");
+	*/
+		    // Publish
+		    documentDashboard.clickPublish();	}
 	
 	// ------------ profile Menu ---------------
 	  @Test(priority = 43)

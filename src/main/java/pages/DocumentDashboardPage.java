@@ -2,7 +2,9 @@ package pages;
 
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import base.BasePage;
 import locators.DocumentDashboardLocators;
@@ -53,8 +55,8 @@ public class DocumentDashboardPage extends BasePage {
 	        }
 
 	 }
-	 /*
-	 	// COUNTING THE FILTER DOCUMENT
+	
+	 	/*// COUNTING THE FILTER DOCUMENT
 	 
 	 	public int getDocumentCount() {
 	 		 return driver.findElements(DocumentDashboardLocators.DOCUMENT_LIST).size();
@@ -81,8 +83,10 @@ public class DocumentDashboardPage extends BasePage {
 	}
 	
 	public void countAllFilters() {
+		
 	    String[] filters = {"All", "Title", "Description", "Tag"};
-	    for (String filter : filters) {
+	    
+	    for (String filter : filters) {	    	
 	        int count = getCountForFilter(filter);
 	        System.out.println(filter + " Count: " + count);
 	    }
@@ -139,20 +143,18 @@ public class DocumentDashboardPage extends BasePage {
     public void addTag(String tagName) {
 
         isVisible(DocumentDashboardLocators.CREATEDOCUMENT_TAGS_CONTAINER);
-        
+                   
         type(DocumentDashboardLocators.CREATEDOCUMENT_TAG_INPUT, tagName);
 
         waitForVisibility(DocumentDashboardLocators.CREATEDOCUMENT_TAGS_DROPDOWN);
 
-        By checkbox = By.xpath("//span[normalize-space()='" + tagName +"']/ancestor::label");
-
+        By checkbox = By.xpath("//span[normalize-space()='" + tagName + "']/ancestor::label//input[@class='checkbox-input']");
+       
         clickJS(checkbox);
         
         smallWait();
         
         clickOutside();
-        
-        
 
         By selectedTag = By.xpath("//span[contains(@class,'category-tag') and normalize-space()='" + tagName + "']");
 
@@ -162,13 +164,13 @@ public class DocumentDashboardPage extends BasePage {
 
     // Upload Document
     public void uploadDocument(String filePath) {
-        type(DocumentDashboardLocators.DOCUMENT_FILETYPE,filePath);
+        type(DocumentDashboardLocators.DOCUMENT_BROWSER_FILE,filePath);
             
     }
 
     // Upload Thumbnail
     public void uploadThumbnail(String filePath) {
-        type(DocumentDashboardLocators.THUMBNAIL_FILETYPE,filePath);
+        type(DocumentDashboardLocators.THUMBNAIL_BROWSER_FILE,filePath);
              
     }
 
