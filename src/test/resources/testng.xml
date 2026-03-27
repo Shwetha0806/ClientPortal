@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="ClientPortalSuite">
+
+	<listeners>
+        <listener class-name="utilities.ExtentReportManager"/>
+    </listeners>
+
+    <test name="ClientPortalTests">
+
+        <classes>
+
+            <class name="testcases.LoginTest"/>
+			<class name="testcases.FolderDashboardTest"/>
+			<class name="testcases.DocumentDashboardTest"/>
+
+        </classes>
+
+    </test>
+
+</suite>
