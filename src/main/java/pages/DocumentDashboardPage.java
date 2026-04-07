@@ -1,11 +1,6 @@
 package pages;
 
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-
 import base.BasePage;
 import locators.DocumentDashboardLocators;
 
@@ -92,111 +87,6 @@ public class DocumentDashboardPage extends BasePage {
 	    }
 	}
 	
-	// ================= CREATE DOCUMENT ====================
-	
-	 public boolean isAddCard() {
-		 return isVisible(DocumentDashboardLocators.ADD_CARD);
-	 }  
-	 
-	 public void clickAddButton() {
-		 	click(DocumentDashboardLocators.ADD_BUTTON);
-	 }
-	 
-	 public boolean isAddtext() {
-	        return isVisible(DocumentDashboardLocators.ADD_TEXT);
-	 }
-	 
-	// Verify popup
-    public void isCreateDocumentPopupDisplayed() {
-        waitForVisibility(DocumentDashboardLocators.CREATE_DOCUMENT_POPUP);
-    }
-
-    // Enter Title
-    public void enterTitle(String title) {
-        type(DocumentDashboardLocators.CREATEDOCUMENT_TITLEINPUT, title);
-    }
-
-    // Enter Description
-    public void enterDescription(String desc) {
-        type(DocumentDashboardLocators.CREATEDOCUMENT_TEXTAREA, desc);
-    }
-
-    // Select Access Type
-    public void selectAccessType(String type) {
-
-        switch (type) {
-            case "Anonymous":
-                safeClick(DocumentDashboardLocators.CREATEDOCUMENT_ANONYMOUS);
-                break;
-
-            case "Registered":
-                safeClick(DocumentDashboardLocators.CREATEDOCUMENT_REGISTER);
-                break;
-
-            case "Private":
-                safeClick(DocumentDashboardLocators.CREATEDOCUMENT_PRIVATE);
-                break;
-        }
-    }
-
-    // Add Tag
-    public void addTag(String tagName) {
-
-        isVisible(DocumentDashboardLocators.CREATEDOCUMENT_TAGS_CONTAINER);
-                   
-        type(DocumentDashboardLocators.CREATEDOCUMENT_TAG_INPUT, tagName);
-
-        waitForVisibility(DocumentDashboardLocators.CREATEDOCUMENT_TAGS_DROPDOWN);
-
-        By checkbox = By.xpath("//span[normalize-space()='" + tagName + "']/ancestor::label//input[@class='checkbox-input']");
-       
-        clickJS(checkbox);
-        
-        smallWait();
-        
-        clickOutside();
-
-        By selectedTag = By.xpath("//span[contains(@class,'category-tag') and normalize-space()='" + tagName + "']");
-
-        waitForVisibility(selectedTag);   
-        
-    }
-
-    // Upload Document
-    public void uploadDocument(String filePath) {
-        type(DocumentDashboardLocators.DOCUMENT_BROWSER_FILE,filePath);
-            
-    }
-
-    // Upload Thumbnail
-    public void uploadThumbnail(String filePath) {
-        type(DocumentDashboardLocators.THUMBNAIL_BROWSER_FILE,filePath);
-             
-    }
-
-    // Select Dates
-    public void selectStartDate(String date) {
-        type(DocumentDashboardLocators.CREATEDOCUMENT_STARTDATE, date);
-    }
-
-    public void selectEndDate(String date) {
-        type(DocumentDashboardLocators.CREATEDOCUMENT_ENDDATE, date);
-    }
-
-    // Save as Draft
-    public void clickSaveAsDraft() {
-        safeClick(DocumentDashboardLocators.SAVE_AS_DRAFT);
-    }
-
-    // Publish
-    public void clickPublish() {
-        safeClick(DocumentDashboardLocators.PUBLISH);
-    }
-
-    // Cancel
-    public void clickCancel() {
-        safeClick(DocumentDashboardLocators.CREATEDOCUMENT_CANCEL);
-    }
 	
 	  // ============== PROFILE ACTIONS ================
 
@@ -232,7 +122,7 @@ public class DocumentDashboardPage extends BasePage {
 	    public void clickLogout() {
 	        openProfileDropdown();
 	        isVisible(DocumentDashboardLocators.LOGOUT);
-	        click(DocumentDashboardLocators.LOGOUT);
+	        clickJS(DocumentDashboardLocators.LOGOUT);
 	    }
 	    
 

@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
+import pages.CreateDocument;
 import pages.DocumentDashboardPage;
 import pages.FolderDashboardPage;
 import pages.LoginPage;
@@ -14,6 +15,7 @@ public class BaseTest {
     protected static LoginPage login;
     protected static FolderDashboardPage dashboard;
     protected static DocumentDashboardPage documentDashboard;
+    protected static CreateDocument createDocument;
     
     @BeforeSuite
     public void setup() {
@@ -24,6 +26,7 @@ public class BaseTest {
         
         login = new LoginPage(driver);
         documentDashboard = new DocumentDashboardPage(driver);
+        createDocument =new CreateDocument(driver);
         
     }
 

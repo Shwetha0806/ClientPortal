@@ -10,7 +10,7 @@ public class DocumentDashboardTest extends BaseTest {
 	@Test(priority=40)
 	public void verifyNavigationToDocumentDashboard() {
 		
-		dashboard.openFolder("LANDQ Testing");
+		dashboard.openFolder("LandQ Testing1");
 		Assert.assertTrue(documentDashboard.isGoBackVisible(),"Go Back button is not visible");
 	}
 	
@@ -18,7 +18,7 @@ public class DocumentDashboardTest extends BaseTest {
 	/*@Test(priority=41)
 	public void verifyGoBackNavigation() {
 		
-		 //Assert.assertTrue(documentDashboard.isGoBackVisible(),"Go Back button is not visible");
+		 Assert.assertTrue(documentDashboard.isGoBackVisible(),"Go Back button is not visible");
 		 documentDashboard.clickGoBack();
 
 	      Assert.assertTrue(dashboard.isHeaderDisplayed(),"User is not navigated to Folder page");
@@ -32,7 +32,7 @@ public class DocumentDashboardTest extends BaseTest {
 	    System.out.println("Filtered Document Count: " + count);
 	    Assert.assertTrue(count > 0, "No documents found after filtering");
 	}
-	*/
+	
 	@Test(priority=41)
 	public void verifyAllFilterCounts() {
 
@@ -40,41 +40,11 @@ public class DocumentDashboardTest extends BaseTest {
 
 	    documentDashboard.countAllFilters();
 	}
-
-	// ------------Create Document -------------
-	@Test(priority=42)
-	public void verifyCreateDocument() {
-		
-			documentDashboard.clickAddButton();
+*/
 	
-		    // Enter details
-		    documentDashboard.enterTitle("Test Document");
-		    documentDashboard.enterDescription("This is test description");
-		
-		    // Access type
-		    documentDashboard.selectAccessType("Public");
-		
-		    // Add tag
-		    String[] tags = {"PG","PDF"};
-		
-		    for (String tag : tags) {
-		    	documentDashboard.addTag(tag);
-		    }  
-		/*
-		    // Upload files
-		
-		    documentDashboard.uploadDocument("C:/Users/hp/Downloads/volworks report.docx");
-		    documentDashboard.uploadThumbnail("C:/Users/hp/Downloads/Earnings Calander Analysis.png");
-		    
-		    // Dates
-		    documentDashboard.selectStartDate("03/25/2026");
-		    documentDashboard.selectEndDate("03/30/2026");
-	*/
-		    // Publish
-		    documentDashboard.clickPublish();	}
 	
 	// ------------ profile Menu ---------------
-	  @Test(priority = 43)
+	  @Test(priority = 60)
       public void verifyProfileMenuOptions() {
 
 		  documentDashboard.openProfileDropdown();
@@ -92,19 +62,18 @@ public class DocumentDashboardTest extends BaseTest {
               "Config Tags missing");
       Assert.assertTrue(documentDashboard.isProfileSendEmailDisplayed(),
               "Send Email missing");
-      }
-
+      
+	  }
       // ================= LOGOUT =================
 
-//     @Test(priority = 100)
-//      public void verifyLogout() {
-//    	 documentDashboard.openProfileDropdown();
-//    	 documentDashboard.clickLogout();
-//
-//      //Assert.assertTrue(driver.getCurrentUrl().contains("login"),"Logout failed");
-//      Assert.assertTrue(login.isLoginWrapperDisplayed() ,
-//	            "Logout failed - loginpage not loaded");
-//  }
+     @Test(priority = 100)
+      public void verifyLogout() {
+    	 documentDashboard.openProfileDropdown();
+    	 documentDashboard.clickLogout();
+
+      Assert.assertTrue(login.isLoginWrapperDisplayed() ,
+	            "Logout failed - loginpage not loaded");
+  }
 	
 
 }

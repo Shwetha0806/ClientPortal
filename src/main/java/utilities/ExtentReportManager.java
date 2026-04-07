@@ -26,7 +26,7 @@ public class ExtentReportManager implements ITestListener{
 		extent = new ExtentReports();
 		extent.attachReporter(sparkReporter);
 		
-		extent.setSystemInfo("Computer Name","ClientPortal");
+		extent.setSystemInfo("Project Name","ClientPortal");
 		extent.setSystemInfo("Environment","QA");
 		extent.setSystemInfo("Tester Name","Shwetha G");
 		extent.setSystemInfo("OS","Windows11");

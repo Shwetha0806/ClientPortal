@@ -11,11 +11,34 @@
         <classes>
 
             <class name="testcases.LoginTest"/>
-			<class name="testcases.FolderDashboardTest"/>
-			<class name="testcases.DocumentDashboardTest"/>
-
+			<class name="testcases.FolderDashboardTest"/>			
+			<class name="testcases.DocumentDashboardTest">
+						
+				<methods>								
+				<include name="verifyNavigationToDocumentDashboard"/>
+				</methods>
+				
+			</class>
+			
+			<class name="testcases.CreateDocumentTest"/>				
         </classes>
-
     </test>
+    
+    
+    <!--  Profile menu options & Logout -->
+    
+    <test name="Dashboard Actions">
+        <classes>
+            <class name="testcases.DocumentDashboardTest">
+            
+                <methods>
+                    <include name="verifyProfileMenuOptions"/>
+                    <include name="verifyLogout"/>
+                </methods>
+                
+            </class>
+        </classes>
+    </test> 
+    
 
 </suite>
