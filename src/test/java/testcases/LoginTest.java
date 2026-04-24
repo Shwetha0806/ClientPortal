@@ -18,38 +18,38 @@ public class LoginTest extends BaseTest {
 */
     // -------- UI TESTS -------- //
 
-    @Test
+    @Test(groups ="visible")
     public void verifyLogo() {  	
         Assert.assertTrue(login.isLogoDisplayed(), "Logo not displayed");
     }
 
-    @Test
+    @Test(groups ="visible")
     public void verifyLoginWrapper() {
         Assert.assertTrue(login.isLoginWrapperDisplayed(), "Login Wrapper not displayed");
     }
 
-    @Test
+    @Test(groups ="visible")
     public void verifyLoginBox() {
         Assert.assertTrue(login.isLoginBoxDisplayed(), "Login Box not displayed");
     }
 
-    @Test
+    @Test(groups ="visible")
     public void verifySubTitle() {
         Assert.assertTrue(login.isSubTitleDisplayed(), "Subtitle not displayed");
     }
 
-    @Test
+    @Test(groups ="visible")
     public void verifyEmailIcon() {
         Assert.assertTrue(login.isEmailIconDisplayed(), "Email icon not displayed");
     }
 
-    @Test
+    @Test(groups ="visible")
     public void verifyPasswordIcon() {
         Assert.assertTrue(login.isPasswordIconDisplayed(), "Password icon not displayed");
     }
 
     // -------- LOGIN TESTS -------- //
-    @Test(priority = 1)
+    @Test(priority = 1, groups="functional")
     public void verifyInvalidLogin() {
 
         login.loginToApplication("akhil.g@landqtech.com", "Shwetha@0806");
@@ -58,7 +58,7 @@ public class LoginTest extends BaseTest {
         Assert.assertEquals(actualError, "Invalid User/Password", "Error message mismatch");
     }
     
-    @Test(priority =2)
+    @Test(priority =2, groups="functional")
     public void verifyValidLogin() {
 
     	dashboard =login.loginToApplication("shwetha.g@landqtech.com", "Shwetha@0806");

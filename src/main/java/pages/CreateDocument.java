@@ -8,6 +8,8 @@ import java.awt.event.KeyEvent;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import base.BasePage;
 import locators.CreateDocumentLocators;
@@ -94,15 +96,14 @@ public class CreateDocument extends BasePage{
 	    }
 
 	    // **************** Upload Document ****************
-	    public void uploadDocument() throws AWTException  {
+	    public void uploadDocument(String filePath1) throws AWTException  {
 	    	
 	    	click(CreateDocumentLocators.DOCUMENT_BROWSER_FILE); 	
 	    	smallWait(); 
-	    	
-	    	// copy file path
-	    	StringSelection filePath1= new StringSelection("C:\\Users\\hp\\Downloads\\volworks report.docx");
-	    	Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filePath1, null);
-	    	
+	    		    	
+	    	StringSelection selection = new StringSelection(filePath1);
+	        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection, null);
+	        
 	    	// Robot Class
 	    	Robot rb =new Robot();
 	    	
@@ -125,14 +126,14 @@ public class CreateDocument extends BasePage{
 	    }
 
 	    // *************** Upload Thumbnail **************
-	    public void uploadThumbnail() throws AWTException {
+	    public void uploadThumbnail(String filePath2) throws AWTException {
 	    	
 	    	clickJS(CreateDocumentLocators.THUMBNAIL_BROWSER_FILE);
 	    	smallWait();
 	    	
 	    	// copy file path
-	    	StringSelection filePath2= new StringSelection("C:\\Users\\hp\\Downloads\\Earnings Calander Analysis.png");
-	    	Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filePath2, null);
+	    	StringSelection selection2= new StringSelection(filePath2);
+	    	Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection2, null);
 	    	
 	    	Robot rb =new Robot();
 	    	
@@ -196,8 +197,9 @@ public class CreateDocument extends BasePage{
 	    }
 		
 	    // ************ Confirmation PopupDisplayed ***********
-	    public boolean isConfirmationPopupDisplayed() {
+	    public boolean isConfirmationPopupDisplayed() {	    	
 	        return isVisible(CreateDocumentLocators.CONFIRMATION_BOX);
+	        
 	    }
 	    
 	    // ************* Confirmation Message ****************
@@ -223,9 +225,10 @@ public class CreateDocument extends BasePage{
 	    
 	    // ************* Success Message **********
 	    public String getSuccessMessageDisplayed() {
-	        return getText(CreateDocumentLocators.SUCCESS_MESSAGE);
+	    	smallWait();
+	    	return getText(CreateDocumentLocators.SUCCESS_MESSAGE);
+	    	
 	    }
-	    
 	    // *********** Document Displayed **********
 	    public boolean isDocumentDisplayed(String docName) {
 	        By doc = By.xpath("//h3[contains(@class,'title') and text()='" + docName + "']");

@@ -7,36 +7,47 @@
     </listeners>
 
     <test name="ClientPortalTests">
-
+    
+    	<groups>
+				<run>
+					<exclude name="user"/>
+				</run>			
+		</groups>	
+  
         <classes>
 
             <class name="testcases.LoginTest"/>
 			<class name="testcases.FolderDashboardTest"/>			
-			<class name="testcases.DocumentDashboardTest">
-						
-				<methods>								
-				<include name="verifyNavigationToDocumentDashboard"/>
-				</methods>
-				
+			<class name="testcases.DocumentDashboardTest">						
+					<methods>								
+							<include name="verifyNavigationToDocumentDashboard"/>
+					</methods>					
 			</class>
-			
-			<class name="testcases.CreateDocumentTest"/>				
+				
+		 	<class name="testcases.CreateDocumentTest"/>    
+                         				
         </classes>
+        
     </test>
     
-    
-    <!--  Profile menu options & Logout -->
-    
+ 
+    <!--  Profile menu options & Logout -->  
+      
     <test name="Dashboard Actions">
         <classes>
-            <class name="testcases.DocumentDashboardTest">
-            
-                <methods>
-                    <include name="verifyProfileMenuOptions"/>
-                    <include name="verifyLogout"/>
-                </methods>
-                
+            <class name="testcases.DocumentDashboardTest">          
+	                <methods>
+	                    <include name="verifyProfileMenuOptions"/>
+	                    <include name="verifyLogout"/>
+	                </methods>               
             </class>
+            
+            <class name="testcases.CreateDocumentTest">
+            	<methods>
+            			<include name="verifyUserDashboard"/>           			
+            	</methods>          	
+            </class> 
+                  
         </classes>
     </test> 
     

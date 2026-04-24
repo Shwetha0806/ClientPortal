@@ -1,0 +1,40 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="CreateDocumentSuite">
+
+	<listeners>
+        <listener class-name="utilities.ExtentReportManager"/>
+    </listeners>
+
+	<!-- Login page-->
+	<test name="CreateDocumentTest">
+	
+		<groups>
+				<run>
+					<exclude name="Access"/>
+				</run>
+		</groups>
+		
+        <classes>
+            <class name="testcases.LoginTest">           
+            	<methods>
+            			<include name="verifyValidLogin"/>
+           		 </methods>            
+             </class>   
+            
+       
+            <!--  navigation to document dashboard-->
+             <class name="testcases.DocumentDashboardTest">         
+                <methods>
+                    	<include name="verifyNavigationToDocumentDashboard"/>
+                </methods>            
+            </class>
+                        
+           <!-- Create Document -->     
+            <class name="testcases.CreateDocumentTest"/>
+            	
+            
+       	</classes>
+ 	</test>
+      
+</suite>

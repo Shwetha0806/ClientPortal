@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="FolderDashboardSuit">
+
+	<listeners>
+        <listener class-name="utilities.ExtentReportManager"/>
+    </listeners>
+    
+	<test name="FolderDashboardTest">	
+		
+		<classes>
+				 <class name="testcases.LoginTest">		            
+		            	<methods>
+		            			<include name="verifyValidLogin"/>
+		           		 </methods>		            
+		         </class>   
+            			
+				<class name="testcases.FolderDashboardTest">
+						<methods>
+		            			<include name="verifyCreateFolderWithName"/>
+		           		 </methods>		
+				</class>           	            	
+		</classes>
+	
+	</test>
+
+
+</suite>

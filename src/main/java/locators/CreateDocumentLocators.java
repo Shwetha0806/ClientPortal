@@ -99,7 +99,7 @@ public class CreateDocumentLocators {
 		public static By YES_PUBLISH_BUTTON = By.xpath("//button[normalize-space()='Yes, Publish']");
 		public static By CANCEL_BUTTON = By.xpath("//button[normalize-space()='Cancel']");
 		
-		public static By SUCCESS_MESSAGE =By.xpath("//div[@class='toast-bottom-right toast-container']");
+		public static By SUCCESS_MESSAGE =By.xpath("//div[contains(@class,'toast-bottom-right')]");
 		
 		// Assign Customer 
 		public static By ASSIGN_CUSTOMER =By.xpath("//div[@class='modal-tabs']//span[contains(text(),'Assign customer')]");

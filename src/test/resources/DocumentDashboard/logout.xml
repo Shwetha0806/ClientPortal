@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="DocumentDashboardSuit">
+
+	<listeners>
+        <listener class-name="utilities.ExtentReportManager"/>
+    </listeners>
+    
+	<test name="DocumentDashboardTest">	
+		
+		<classes>
+				 <class name="testcases.LoginTest">		            
+		            	<methods>
+		            			<include name="verifyValidLogin"/>
+		           		 </methods>		            
+		         </class>   
+            			
+				<class name="testcases.DocumentDashboardTest">
+						<methods>
+		            			<include name="verifyNavigationToDocumentDashboard"/>
+		            			<include name="verifyLogout"/>
+		           		 </methods>		
+				</class>           	            	
+		</classes>
+	
+	</test>
+
+
+</suite>

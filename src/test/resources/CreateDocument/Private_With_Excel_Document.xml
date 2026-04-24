@@ -1,39 +1,32 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<suite name="ClientPortalSuite">
+<suite name="CreateDocumentSuite">
 
 	<listeners>
         <listener class-name="utilities.ExtentReportManager"/>
     </listeners>
 
 	<!-- Login page-->
-	<test name="Login Test">
+	<test name="CreateDocumentTest">
         <classes>
-            <class name="testcases.LoginTest">
-            
+            <class name="testcases.LoginTest">           
             	<methods>
             			<include name="verifyValidLogin"/>
-           		 </methods>
+           		 </methods>            
+             </class>   
             
-            </class>   
-            
-            
+       
             <!--  navigation to document dashboard-->
-             <class name="testcases.DocumentDashboardTest">
-            
+             <class name="testcases.DocumentDashboardTest">         
                 <methods>
                     	<include name="verifyNavigationToDocumentDashboard"/>
-                </methods>
-                
+                </methods>            
             </class>
-            
-            
-           <!-- Create Document --> 
-    
+                        
+           <!-- Create Document -->     
             <class name="testcases.CreateDocumentTest">
             	<methods>
-            			<include name="verifyCreatePrivateDocument"/>
-            			
+            			<include name="verifyCreatePrivateWithExcelDocument"/>          			
             	</methods>
             </class> 
             
@@ -43,28 +36,21 @@
            <!--  Profile menu options -->   
      <test name="Profile action">
            <classes>
-                <class name="testcases.DocumentDashboardTest">
-            
+                <class name="testcases.DocumentDashboardTest">           
                		<methods>
                   			<include name="verifyProfileMenuOptions"/>
                     		<include name="verifyLogout"/>
-                	</methods>
-                
-            </class>  
-            
-            
+                	</methods>               
+            	</class>  
+                       
             <!--  User Dashboard -->
-            <class name="testcases.CreateDocumentTest">
-            	<methods>
-            			<include name="verifyUserDashboard"/>
-            			
-            	</methods>
-            	
-            </class>       
+	            <class name="testcases.CreateDocumentTest">
+	            	<methods>
+	            			<include name="verifyUserDashboard"/>	            			
+	            	</methods>         	
+	            </class>       
         </classes>
         
-    </test>
-    
-    
+    </test>   
 
 </suite>

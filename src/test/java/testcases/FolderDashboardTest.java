@@ -9,78 +9,78 @@ public class FolderDashboardTest extends BaseTest {
   
     // ================= HEADER =================
 
-    	@Test(priority=11)
+    	@Test(priority=11, groups="visible")
     	public void verifyHeaderSection() {
         Assert.assertTrue(dashboard.isHeaderDisplayed(), "Header is not displayed");
     	}
     
-        @Test(priority = 12)
+        @Test(priority = 12, groups="visible")
         public void verifyDashboardLogo() {
         Assert.assertTrue(dashboard.isLogoDisplayed(), "Logo is not displayed");
         }
         
-        @Test(priority = 13)
+        @Test(priority = 13, groups="visible")
         public void verifyProfileIcon() {
         Assert.assertTrue(dashboard.isProfileIconDisplayed(), "Profile icon is not displayed");
         }
 
         // ================= BODY =================
 
-        @Test(priority = 14)
+        @Test(priority = 14, groups="visible")
         public void verifyFolderContainer() {
         Assert.assertTrue(dashboard.isFolderContainerDisplayed(), "Folder container not displayed");
         }
 
-        @Test(priority = 15)
+        @Test(priority = 15, groups="visible")
         public void verifyPageTitle() {
         Assert.assertTrue(dashboard.isPageTitleDisplayed(), "Page title not displayed");
         }
         
        
-        @Test(priority = 16)
+        @Test(priority = 16, groups="visible")
         public void verifyDocumentTab() {
             dashboard.clickDocumentTab();
 
             Assert.assertTrue(driver.getCurrentUrl().contains("dashboard"), "Document tab not opened");
         }
 
-        @Test(priority = 17)
+        @Test(priority = 17, groups="visible")
         public void verifyFolderTab() {
 
             dashboard.clickFolderTab();
             Assert.assertTrue(dashboard.isCreateFolderCardDisplayed(), "Folder tab not opened");
         }
 
-        @Test(priority = 18)
+        @Test(priority = 18, groups="visible")
         public void verifyFolderIcons() {
             Assert.assertTrue( dashboard.areFolderIconsDisplayed(), "Folder icons not displayed");
         }
 
-        @Test(priority = 31)
+        @Test(priority = 31, groups="functional")
         public void verifySearchFolder() {
             dashboard.searchFolder("Test");
             Assert.assertTrue( dashboard.getFolderCount() >= 0,  "Search not working");
         }
         // ================= FOOTER =================
 
-        @Test(priority = 20)
+        @Test(priority = 20, groups="visible")
         public void verifyFooterSection() {
         Assert.assertTrue(dashboard.isFooterDisplayed(), "Footer not displayed");
         }
         
-        @Test(priority = 21)
+        @Test(priority = 21, groups="visible")
         public void verifyFooterTest() {
         Assert.assertTrue(dashboard.isFooterTextDisplayed(), "Footer text missing");
         } 
         
-        @Test(priority = 22)
+        @Test(priority = 22, groups="visible")
         public void verifyVersionText() {
         Assert.assertTrue(dashboard.isVersionTextDisplayed(), "Version text not displayed");
         }
 
       // ================= CREATE FOLDER POPUP =================
         
-        @Test(priority = 23)
+        @Test(priority = 23, groups="functional")
         public void verifyCreateFolderWithName() {
 
             String folderName = "NewFolders1";
@@ -107,7 +107,7 @@ public class FolderDashboardTest extends BaseTest {
               
         
         
-        @Test(priority = 24)
+        @Test(priority = 24, groups="functional")
         public void verifyCreateFolderPopup() {
         dashboard.clickAddButton();
         Assert.assertTrue(dashboard.isCreateFolderPopupDisplayed(), "Create Folder popup not displayed");
@@ -119,7 +119,7 @@ public class FolderDashboardTest extends BaseTest {
 
         // ================= PIN / UNPIN COUNT =================
 
-        @Test(priority = 25)
+        @Test(priority = 25, groups="functional")
         public void verifyPinnedAndUnpinnedFolderCount() {
 
         int total = dashboard.getTotalFolderCount();
@@ -136,13 +136,13 @@ public class FolderDashboardTest extends BaseTest {
 
         // ================= DROPDOWN =================
 
-        @Test(priority = 26)
+        @Test(priority = 26, groups="visible")
         public void verifyDropdownDisplayed() {
         Assert.assertTrue(dashboard.isDropdownDisplayed(),
                 "Order dropdown not displayed");
         }
 
-        @Test(priority = 27)
+        @Test(priority = 27, groups="visible")
         public void verifyDropdownOpens() {
 
         dashboard.openDropdown();
@@ -150,7 +150,7 @@ public class FolderDashboardTest extends BaseTest {
                 "Dropdown options not visible");
         }
 
-        @Test(priority = 28)
+        @Test(priority = 28, groups="visible")
         public void verifyDefaultSelection() {
 
         Assert.assertEquals(dashboard.getSelectedText(),
@@ -158,7 +158,7 @@ public class FolderDashboardTest extends BaseTest {
                 "Default selection incorrect");
         }
         
-        @Test(priority=29)
+        @Test(priority=29, groups="functional")
         public void printFoldersForAllDropdownOptions() {
 
         String[] options = {
@@ -178,7 +178,7 @@ public class FolderDashboardTest extends BaseTest {
    
         // ======================== CLEAR ALL VALIDATION ========================
 
-        @Test(priority = 30)
+        @Test(priority = 30, groups="functional")
         public void verifyClearAllFunctionality() {
 
     	dashboard.selectOption("Pinned");

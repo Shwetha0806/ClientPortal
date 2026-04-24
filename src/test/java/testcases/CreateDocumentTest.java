@@ -9,8 +9,9 @@ import base.BaseTest;
 import locators.DocumentDashboardLocators;
 
 public class CreateDocumentTest extends BaseTest{
-		String DocName=" Automation Test Document";
+		//String DocName=" Automation Test Document";
 	// ------------Create Document -------------
+			
 		@Test(priority=42)
 		public void verifyAddButton() {	
 				createDocument.clickAddButton();
@@ -18,7 +19,7 @@ public class CreateDocumentTest extends BaseTest{
 		
 		@Test(priority=43)
 		public void verifyEntertitle() {		
-				createDocument.enterTitle(DocName);
+				createDocument.enterTitle("Automation Test Open Access with word Document");
 		}
 		
 		@Test(priority=44)
@@ -34,7 +35,7 @@ public class CreateDocumentTest extends BaseTest{
 		@Test(priority=46)
 		public void verifyAddTag()
 		{
-			    String[] tags = {"PDF","PG"};
+			    String[] tags = {"Word Doc","HD"};
 			
 			    for (String tag : tags) {
 			    	createDocument.addTag(tag);
@@ -42,13 +43,13 @@ public class CreateDocumentTest extends BaseTest{
 		}
 		
 		@Test(priority=47)
-		public void verifyUploadDocument() throws AWTException{			    
-				createDocument.uploadDocument();
+		public void verifyUploadDocument() throws AWTException{	
+				createDocument.uploadDocument("C:\\Users\\hp\\Downloads\\volworks report.docx");
 		}
 		
 		@Test(priority=48)
 		public void verifyUploadThumbnail()throws AWTException{
-				createDocument.uploadThumbnail();
+				createDocument.uploadThumbnail("C:\\Users\\hp\\Downloads\\Earnings Calander Analysis.png");
 		}
 		
 		@Test(priority=49)
@@ -95,32 +96,33 @@ public class CreateDocumentTest extends BaseTest{
 		@ Test(priority=56)
 		public void verifyDocumentDisplayed() {
 			//Assert.assertTrue(createDocument.isDocumentDisplayed(DocName), "Document not displayed after refresh");
-			 boolean name = createDocument.isDocumentDisplayed(DocName);
+			 boolean name = createDocument.isDocumentDisplayed("Automation Test Open Access with word Document");
 			 
 			 System.out.println("========== validatio for the Document Displayed ========");
-			 System.out.println("Document is displayed: "+name);
+			 System.out.println("Open Access with word document is displayed: "+name);
 		}
 		
-		@Test(priority=57)
-		public void verifyCreatePrivateDocument() throws AWTException {
+		// Private Access type
+		@Test(priority=57, groups="Access")
+		public void verifyCreatePrivateWithExcelDocument() throws AWTException {
 			
 			createDocument.clickAddButton();
 			
-			createDocument.enterTitle(DocName);
+			createDocument.enterTitle("Automation Test Private with EXCEL Document");
 			
 			createDocument.enterDescription("This is test description");
 			
 			createDocument.selectAccessType("Private");
 			
-			String[] tags = {"PDF","PG"};
+			String[] tags = {"Excel File","PG"};
 			
 		    for (String tag : tags) {
 		    	createDocument.addTag(tag);	    	
 		    }
 		    
-		    createDocument.uploadDocument();
+		    createDocument.uploadDocument("C:\\Users\\hp\\Downloads\\volworks-reports-Put Writes_20260210125733");
 		    
-		    createDocument.uploadThumbnail();
+		    createDocument.uploadThumbnail("C:\\Users\\hp\\Downloads\\Screenshot 2026-02-06 145304 (1)");
 		    
 		    createDocument.isCaptureThumbnailChecked();
 		    
@@ -144,14 +146,103 @@ public class CreateDocumentTest extends BaseTest{
 		    
 		    driver.navigate().refresh();
 		    
-		    boolean name = createDocument.isDocumentDisplayed(DocName);
+		    boolean name = createDocument.isDocumentDisplayed("Automation Test Private with EXCEL Document");
 			 
 			 System.out.println("========== validation for the Document Displayed ========");
-			 System.out.println("Document is displayed on the Admin portal: "+name);
+			 System.out.println("private with Excel document is displayed: "+name);
 			 
 		}
 		
-		@Test(priority=58)
+		// Register Access with PDF Document
+		@Test(priority=58, groups="Access")
+		public void verifyCreateRegisterWithPDFDocument() throws AWTException {
+			
+			createDocument.clickAddButton();
+			
+			createDocument.enterTitle("Automation Test Register with PDF Document");
+			
+			createDocument.enterDescription("This is test description");
+			
+			createDocument.selectAccessType("Register");
+			
+			String[] tags = {"PDF","PG"};
+			
+		    for (String tag : tags) {
+		    	createDocument.addTag(tag);	    	
+		    }
+		    
+		    createDocument.uploadDocument("C:\\Users\\hp\\Downloads\\volworks-reports-Trailing Returns_20260227124114");
+		    
+		    createDocument.uploadThumbnail("C:\\Users\\hp\\Downloads\\V3 - FINAL");
+		    
+		    createDocument.isCaptureThumbnailChecked();
+		    
+		    createDocument.isAvailableDateChecked();
+		    
+		    createDocument.clickPublish();
+		    
+		    createDocument.isConfirmationPopupDisplayed();
+		    
+		    createDocument.clickYesPublish();
+		    
+		    createDocument.getSuccessMessageDisplayed();
+		    
+		    driver.navigate().refresh();
+		    
+		    boolean name = createDocument.isDocumentDisplayed("Automation Test Register with PDF Document");
+			 
+			 System.out.println("========== validation for the Document Displayed ========");
+			 System.out.println("Register with PDF document is displayed: "+name);
+			 
+		}
+		
+		// Register without Thumbnail with PPT Document
+		@Test(priority=58, groups="Access")
+		public void verifyCreateWithoutThumbnailWithPPTDocument() throws AWTException, InterruptedException {
+					
+			createDocument.clickAddButton();
+					
+			createDocument.enterTitle("Automation Test without Thumbnail with PPT Document");
+					
+			createDocument.enterDescription("This is test description");
+					
+			createDocument.selectAccessType("Register");
+					
+			String[] tags = {"PPT","ORCL"};
+					
+			for (String tag : tags) {
+				   createDocument.addTag(tag);	    	
+			}
+				    
+			createDocument.uploadDocument("C:\\Users\\hp\\Downloads\\L&Q Team Meeting Draft.pptx");
+				    
+			//createDocument.uploadThumbnail("C:\\Users\\hp\\Downloads\\V3 - FINAL");
+				    
+			 Assert.assertTrue(createDocument.isCaptureThumbnailChecked(), "Capture thumbnail checkbox not selected");
+				    
+			createDocument.isAvailableDateChecked();
+				    
+			createDocument.clickPublish();
+				    
+			createDocument.isConfirmationPopupDisplayed();
+				    
+			createDocument.clickYesPublish();
+						
+			createDocument.getSuccessMessageDisplayed();
+				    
+			driver.navigate().refresh();
+			
+			Thread.sleep(3000);
+			boolean name = createDocument.isDocumentDisplayed("Automation Test without Thumbnail with PPT Document");
+					 
+			System.out.println("========== validation for the Document Displayed ========");
+			System.out.println("Register without Thumbnail with PPT document is displayed: "+name);
+					 
+				}
+								 
+		
+		
+		@Test(priority=59, groups={"user","Access"})
 		public void verifyUserDashboard() {
 			
 			// User Dashboard login
@@ -164,7 +255,7 @@ public class CreateDocumentTest extends BaseTest{
 			
 			driver.navigate().refresh();
 			    
-			boolean name = createDocument.isDocumentDisplayed(DocName);
+			boolean name = createDocument.isDocumentDisplayed("Automation Test Private with EXCEL Document");
 				 
 			System.out.println("========== validatio for the User Portal ========");
 			System.out.println("document is displayed on the user Portal: "+name);

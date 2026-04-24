@@ -1,6 +1,8 @@
 package base;
 
+
 import java.time.Duration;
+
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -143,4 +145,7 @@ public class BasePage {
     public void waitForInvisibility(By locator) {
         wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
     }
+    
+    
+    
 }
